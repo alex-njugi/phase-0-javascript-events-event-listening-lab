@@ -1,12 +1,15 @@
-function addingEventListener() {
+document.addEventListener("DOMContentLoaded", function () {
+  function addingEventListener() {
     const button = document.getElementById("button");
-  
+
     function clickAlert() {
       alert("I was clicked!");
     }
-  
-    button.addEventListener("click", clickAlert);
+
+    if (button) {
+      button.addEventListener("click", clickAlert);
+    }
   }
-  
+
   addingEventListener();
-  
+});
